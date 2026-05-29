@@ -21,6 +21,5 @@
         "dart.sdkPath": "/opt/flutter/bin/cache/dart-sdk"
       }
     }
-  },
-  "postCreateCommand": "flutter doctor -v"
+  }
 }

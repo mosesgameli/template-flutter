@@ -41,10 +41,10 @@ Or use the GitHub **Use this template** button to create a new repository, then 
 
 ## Verify The Environment
 
-The dev container runs this after creation:
+The template does not run `flutter doctor` automatically so Codespaces can finish startup as soon as the prebuilt image is ready. Run it manually inside the Codespace when you want to verify the toolchain:
 
 ```sh
 flutter doctor -v
 ```
 
-You can run it again inside the Codespace whenever you need to check the Flutter and Android setup.
+You can run it whenever you need to check the Flutter and Android setup.
