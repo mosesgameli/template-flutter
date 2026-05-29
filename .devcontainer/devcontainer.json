@@ -1,10 +1,10 @@
 {
   "name": "Flutter Android Codespace",
-  "build": {
-    "dockerfile": "Dockerfile",
-    "context": "."
-  },
+  "image": "ghcr.io/mosesgameli/template-flutter:latest",
   "remoteUser": "vscode",
+  "runArgs": [
+    "--platform=linux/amd64"
+  ],
   "hostRequirements": {
     "cpus": 4,
     "memory": "16gb",
