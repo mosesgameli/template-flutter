@@ -2,9 +2,7 @@
   "name": "Flutter Android Codespace",
   "image": "ghcr.io/mosesgameli/template-flutter:latest",
   "remoteUser": "vscode",
-  "runArgs": [
-    "--platform=linux/amd64"
-  ],
+  "runArgs": ["--platform=linux/amd64"],
   "hostRequirements": {
     "cpus": 4,
     "memory": "16gb",
@@ -17,10 +15,7 @@
   },
   "customizations": {
     "vscode": {
-      "extensions": [
-        "Dart-Code.dart-code",
-        "Dart-Code.flutter"
-      ],
+      "extensions": ["Dart-Code.dart-code", "Dart-Code.flutter"],
       "settings": {
         "dart.flutterSdkPath": "/opt/flutter",
         "dart.sdkPath": "/opt/flutter/bin/cache/dart-sdk"
