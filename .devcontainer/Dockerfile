@@ -1,9 +1,9 @@
 FROM mcr.microsoft.com/devcontainers/base:ubuntu-24.04
 
-ARG FLUTTER_CHANNEL=stable
-ARG ANDROID_CMDLINE_TOOLS_VERSION=11076708
-ARG ANDROID_PLATFORM_VERSION=35
-ARG ANDROID_BUILD_TOOLS_VERSION=35.0.0
+ARG FLUTTER_VERSION=3.44.0
+ARG ANDROID_CMDLINE_TOOLS_VERSION=14742923
+ARG ANDROID_PLATFORM_VERSION=36
+ARG ANDROID_BUILD_TOOLS_VERSION=37.0.0
 
 ENV DEBIAN_FRONTEND=noninteractive \
     FLUTTER_ROOT=/opt/flutter \
@@ -33,7 +33,7 @@ RUN apt-get update \
     zip \
     && rm -rf /var/lib/apt/lists/*
 
-RUN git clone --depth 1 --branch "${FLUTTER_CHANNEL}" https://github.com/flutter/flutter.git "${FLUTTER_ROOT}" \
+RUN git clone --depth 1 --branch "${FLUTTER_VERSION}" https://github.com/flutter/flutter.git "${FLUTTER_ROOT}" \
     && flutter config --no-analytics \
     && flutter precache --android
 
