@@ -49,4 +49,6 @@ RUN mkdir -p "${ANDROID_HOME}/cmdline-tools" \
     "build-tools;${ANDROID_BUILD_TOOLS_VERSION}" \
     "cmdline-tools;latest") \
     && flutter config --android-sdk "${ANDROID_HOME}" \
-    && chmod -R a+rwX "${ANDROID_HOME}" "${FLUTTER_ROOT}"
+    && git config --system --add safe.directory "${FLUTTER_ROOT}" \
+    && chown -R vscode:vscode "${ANDROID_HOME}" "${FLUTTER_ROOT}" \
+    && chmod -R u+rwX,go+rX "${ANDROID_HOME}" "${FLUTTER_ROOT}"
